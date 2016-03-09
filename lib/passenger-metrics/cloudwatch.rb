@@ -75,7 +75,7 @@ module PassengerMetrics
     end
 
     def client
-      @client ||= ::Aws::CloudWatch::Client.new
+      @client ||= ::Aws::CloudWatch::Client.new region: 'us-east-1'
     end
   end
 end

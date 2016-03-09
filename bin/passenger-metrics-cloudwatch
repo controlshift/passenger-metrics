@@ -3,6 +3,6 @@
 require 'passenger-metrics'
 
 # loop over each metric, and send them to cloudwatch
-PassengerMetrics::Base.descendants.each do |metric_klass|
+PassengerMetrics::Metrics::Base.descendants.each do |metric_klass|
   PassengerMetrics::Cloudwatch.new(metric_klass.new).put 
 end
