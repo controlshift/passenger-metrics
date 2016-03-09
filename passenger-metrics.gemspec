@@ -20,7 +20,6 @@ Gem::Specification.new do |s|
     "README.md"
   ]
   s.files = [
-    ".byebug_history",
     ".rspec",
     "Gemfile",
     "Gemfile.lock",
@@ -31,10 +30,19 @@ Gem::Specification.new do |s|
     "VERSION",
     "bin/_guard-core",
     "bin/guard",
+    "bin/passenger-metrics-cloudwatch",
     "lib/passenger-metrics.rb",
+    "lib/passenger-metrics/cloudwatch.rb",
+    "lib/passenger-metrics/metrics/base.rb",
+    "lib/passenger-metrics/metrics/queue_length.rb",
+    "lib/passenger-metrics/status.rb",
+    "passenger-metrics.gemspec",
     "spec/fixtures/status.xml",
+    "spec/passenger-metrics/cloudwatch_spec.rb",
+    "spec/passenger-metrics/status_spec.rb",
     "spec/passenger_metrics_spec.rb",
-    "spec/spec_helper.rb"
+    "spec/spec_helper.rb",
+    "spec/status_spec.rb"
   ]
   s.homepage = "http://github.com/controlshift/passenger-metrics"
   s.licenses = ["MIT"]
