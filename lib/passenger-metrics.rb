@@ -1,6 +1,5 @@
 require 'aws-sdk'
 require 'crack'
-require 'byebug'
 
 module PassengerMetrics
   def self.status
