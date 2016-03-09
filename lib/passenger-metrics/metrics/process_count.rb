@@ -1,17 +1,18 @@
 module PassengerMetrics
   module Metrics
-    class QueueLength < PassengerMetrics::Metrics::Base
+    class ProcessCount < PassengerMetrics::Metrics::Base
       def unit
         :count
       end
 
       def value
-        PassengerMetrics.status.info['get_wait_list_size']
+        PassengerMetrics.status.info['process_count']
       end
 
       def metric_name
-        'PassengerQueueLenght'
+        'PassengerProcessCount'
       end
+  
     end
   end
 end

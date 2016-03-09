@@ -43,7 +43,7 @@ module PassengerMetrics
     end
 
     def metric_name
-      ENV["AWS_CLOUDWATCH_METRIC_NAME"] || DEFAULT_METRIC_NAME
+      metric.metric_name || ENV["AWS_CLOUDWATCH_METRIC_NAME"] || DEFAULT_METRIC_NAME
     end
 
     def dimension_name
