@@ -1,17 +1,14 @@
+require 'aws-sdk'
 require 'crack'
+require 'byebug'
 
-class PassengerMetrics
-  def info
-    @info
-  end
-
-  def load!
-    @info = Crack::XML.parse(passenger_status_output)['info']
-  end
-
-  private
-
-  def passenger_status_output
-    `passenger-status --show=xml`
+module PassengerMetrics
+  def self.status
+    @status ||= PassengerMetrics::Status.new
   end
 end
+
+require 'passenger-metrics/metrics/base'
+require 'passenger-metrics/metrics/queue_length'
+require 'passenger-metrics/status'
+require 'passenger-metrics/cloudwatch'
