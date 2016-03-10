@@ -1,3 +1,5 @@
+require 'net/http'
+
 module PassengerMetrics
   class Cloudwatch
     DEFAULT_NAMESPACE = "Passenger"
@@ -51,7 +53,7 @@ module PassengerMetrics
     end
 
     def dimension_value
-      ENV["AWS_CLOUDWATCH_DIMENSION_VALUE"] || DEFAULT_DIMENSION_VALUE
+      ENV["AWS_CLOUDWATCH_DIMENSION_VALUE"] || instance_id || DEFAULT_DIMENSION_VALUE
     end
 
     def dimensions
@@ -77,5 +79,9 @@ module PassengerMetrics
     def client
       @client ||= ::Aws::CloudWatch::Client.new region: 'us-east-1'
     end
+
+    def instance_id
+      PassengerMetrics.instance_id
+    end  
   end
 end
