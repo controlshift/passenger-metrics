@@ -1,15 +1,13 @@
 source "http://rubygems.org"
-# Add dependencies required to use your gem here.
-gem 'crack'
-gem 'aws-sdk'
 
-# Add dependencies to develop your gem here.
-# Include everything needed to run rake, tests, features, etc.
+gem 'crack', '~> 0.4.3'
+gem 'aws-sdk', '~> 2.2', '>= 2.2.24'
+
 group :development do
-  gem "rspec", ">= 0"
-  gem "bundler", "~> 1.0"
-  gem "jeweler", "~> 2.0.1"
-  gem 'guard'
+  gem 'rspec', '>= 0'
+  gem 'bundler', '~> 1.0'
+  gem 'jeweler', '~> 2.1', '>= 2.1.2'
+  gem 'guard', '~> 2.13'
   gem 'guard-rspec', require: false
   gem 'byebug'
 end
