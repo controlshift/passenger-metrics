@@ -5,7 +5,6 @@ gem 'aws-sdk', '~> 2.2', '>= 2.2.24'
 
 group :development do
   gem 'rspec', '>= 0'
-  gem 'bundler', '~> 1.0'
   gem 'jeweler', '~> 2.1', '>= 2.1.2'
   gem 'guard', '~> 2.13'
   gem 'guard-rspec', require: false
