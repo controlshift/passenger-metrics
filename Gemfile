@@ -2,6 +2,7 @@ source "http://rubygems.org"
 
 gem 'crack', '~> 0.4.3'
 gem 'aws-sdk-cloudwatch'
+gem 'aws-sdk-ec2'
 
 group :development do
   gem 'rspec', '>= 0'

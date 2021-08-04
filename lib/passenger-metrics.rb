@@ -1,4 +1,5 @@
 require 'aws-sdk-cloudwatch'
+require 'aws-sdk-ec2'
 require 'crack'
 
 module PassengerMetrics
@@ -7,7 +8,11 @@ module PassengerMetrics
   end
 
   def self.instance_id
-    @instance_id ||= Net::HTTP.get( URI.parse('http://169.254.169.254/latest/meta-data/instance-id' ) )
+    @instance_id ||= @_metadata_client.get('/latest/meta-data/instance-id')
+  end
+
+  def self.metadata_client
+    @_metadata_client ||= Aws::EC2Metadata.new
   end
 end
 
