@@ -1,4 +1,4 @@
-require 'aws-sdk'
+require 'aws-sdk-cloudwatch'
 require 'crack'
 
 module PassengerMetrics

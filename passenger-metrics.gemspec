@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0".freeze) if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib".freeze]
   s.authors = ["Nathan Woodhull".freeze]
-  s.date = "2021-07-23"
+  s.date = "2021-08-04"
   s.description = "Get passenger metrics from passenger-status into the analytics tool of your choice.".freeze
   s.email = "nathan@gcontrolshiftlabs.com".freeze
   s.executables = ["passenger-metrics-cloudwatch".freeze]
@@ -57,7 +57,7 @@ Gem::Specification.new do |s|
 
   if s.respond_to? :add_runtime_dependency then
     s.add_runtime_dependency(%q<crack>.freeze, ["~> 0.4.3"])
-    s.add_runtime_dependency(%q<aws-sdk>.freeze, ["~> 2.2", ">= 2.2.24"])
+    s.add_runtime_dependency(%q<aws-sdk-cloudwatch>.freeze, [">= 0"])
     s.add_development_dependency(%q<rspec>.freeze, [">= 0"])
     s.add_development_dependency(%q<jeweler>.freeze, ["~> 2.1", ">= 2.1.2"])
     s.add_development_dependency(%q<guard>.freeze, ["~> 2.13"])
@@ -65,7 +65,7 @@ Gem::Specification.new do |s|
     s.add_development_dependency(%q<byebug>.freeze, [">= 0"])
   else
     s.add_dependency(%q<crack>.freeze, ["~> 0.4.3"])
-    s.add_dependency(%q<aws-sdk>.freeze, ["~> 2.2", ">= 2.2.24"])
+    s.add_dependency(%q<aws-sdk-cloudwatch>.freeze, [">= 0"])
     s.add_dependency(%q<rspec>.freeze, [">= 0"])
     s.add_dependency(%q<jeweler>.freeze, ["~> 2.1", ">= 2.1.2"])
     s.add_dependency(%q<guard>.freeze, ["~> 2.13"])
