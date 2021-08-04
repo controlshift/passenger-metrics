@@ -10,7 +10,7 @@ module PassengerMetrics
       end
 
       def metric_name
-        'PassengerQueueLenght'
+        'PassengerQueueLength'
       end
     end
   end
