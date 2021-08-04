@@ -8,7 +8,7 @@ module PassengerMetrics
   end
 
   def self.instance_id
-    @instance_id ||= @_metadata_client.get('/latest/meta-data/instance-id')
+    @instance_id ||= metadata_client.get('/latest/meta-data/instance-id')
   end
 
   def self.metadata_client
